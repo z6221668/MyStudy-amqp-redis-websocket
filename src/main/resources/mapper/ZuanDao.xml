@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--线索选项-->
+<mapper namespace="com.example.studyVue.web.dao.ZuanDao">
+
+    <insert id="insert">
+    insert into zuan_content (content,point) values (#{content},#{point});
+    </insert>
+
+
+    <update id="upvote">
+    update zuan_content set point = point+1 where id=#{id}
+    </update>
+
+    <select id="getList" resultType="com.example.studyVue.web.entity.po.ZuanPO">
+        select id, content,point from zuan_content order by point desc
+    </select>
+</mapper>

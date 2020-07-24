@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--线索选项-->
+<mapper namespace="com.example.studyVue.web.dao.BannerDao">
+
+    <select id="getBannerImg" resultType="String">
+        select img_src from img_table limit 6
+    </select>
+</mapper>

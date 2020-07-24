@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--线索选项-->
+<mapper namespace="com.example.studyVue.web.dao.UserDao">
+
+    <select id="loginByUp" resultType="com.example.studyVue.web.entity.po.UserPO">
+        select id,nick_name,phone,password,create_time,user_id from user where phone=#{phone} and password=#{password}
+    </select>
+
+    <select id="selectAll" resultType="com.example.studyVue.web.entity.po.UserPO">
+        select * from user
+    </select>
+</mapper>
